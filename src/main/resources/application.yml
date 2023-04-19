@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/investdb
+    username: root
+    password: postgre12
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        # show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 100
+  redis:
+    host: localhost
+    port: 6379
+    password: gitaeklee960112
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: sidevalley
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
