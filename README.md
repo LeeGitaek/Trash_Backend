@@ -1,2 +1,3 @@
 # Trash_Backend
-Someday, I felt my code is trash. I've learned spring backend during 3 weeks 
+
+Someday, I felt that I wrote trash. I've learned spring backend over 3 weeks
